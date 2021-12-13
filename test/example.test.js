@@ -4,7 +4,7 @@ import { renderDogCard, renderDogDetail } from '../render-utils.js';
 
 const test = QUnit.test;
 
-test('renderDogCard should return an anchor tag', (expect) => {
+test('renderDogCard should return a DOM element', (expect) => {
     //Arrange
     let dog =
         {
@@ -21,7 +21,7 @@ test('renderDogCard should return an anchor tag', (expect) => {
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual.outerHTML, expected);
+    expect.equal(actual.outerHTML, expected, 'renderDogCard returns an anchor tag');
 });
 
 test ('renderDogDetail should retun a DOM element', (expect) => {
@@ -37,5 +37,5 @@ test ('renderDogDetail should retun a DOM element', (expect) => {
 
     const actual = renderDogDetail(dog);
 
-    expect.equal(actual.outerHTML, expected, 'renderMushroom() returns a DIV');
+    expect.equal(actual.outerHTML, expected, 'renderDogDetail() returns a DIV');
 });
